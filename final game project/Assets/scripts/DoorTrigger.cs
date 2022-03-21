@@ -5,11 +5,10 @@ using UnityEngine;
 public class DoorTrigger : MonoBehaviour
 {
     
- 
-     public GameObject door;
+   [SerializeField] GameObject door;
 
-    private void onTriggerEnter(Collider other)
+    void onTriggerEnter(Collider col)
     {
-        door.transform.position += new Vector3 (0,100,0);
+        door.transform.position += new Vector3 (0,10,0);
     }
 }

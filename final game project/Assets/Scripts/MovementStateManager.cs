@@ -15,6 +15,7 @@ public class MovementStateManager : MonoBehaviour
 
     [SerializeField] float gravity = -9.81f;
     Vector3 velocity;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,8 @@ public class MovementStateManager : MonoBehaviour
     {
         GetDirectionAndMove();
         Gravity();
+
+       
     }
 
     void GetDirectionAndMove()
