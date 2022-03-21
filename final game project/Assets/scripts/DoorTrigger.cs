@@ -8,8 +8,8 @@ public class DoorTrigger : MonoBehaviour
  
      public GameObject door;
 
-    void onTriggerEnter(Collider other)
+    private void onTriggerEnter(Collider other)
     {
-        door.transform.position += new Vector3(0,30,0);
+        door.transform.position += new Vector3 (0,100,0);
     }
 }
