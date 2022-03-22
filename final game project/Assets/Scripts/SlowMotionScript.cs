@@ -32,11 +32,11 @@ public class SlowMotionScript : MonoBehaviour
 
     void StartSlowMotion()
     {
-        Time.timeScale = Mathf.Lerp(1,0.1f,5);
+        Time.timeScale = Mathf.Lerp(1,0.2f,5);
     }
 
     void StopSlowMotion()
     {
-        Time.timeScale = Mathf.Lerp(0.1f, 1,5);
+        Time.timeScale = Mathf.Lerp(0.2f, 1,5);
     }
 }
