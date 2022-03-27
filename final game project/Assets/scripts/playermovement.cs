@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //public bool disabled = false;
     public Transform cam;
  
    public CharacterController controller;
@@ -46,6 +47,17 @@ public class PlayerMovement : MonoBehaviour
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity*Time.deltaTime);
+
+        //if(!disabled)
+        {
+           // UpdateMouseLook();
+            //UpdateMovement();
+          //  Update();
+            //InteractCheck();
+        }
+
+
+
     }
 
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovementStateManager : MonoBehaviour
 {
+    public bool disabled = false;
     public float moveSpeed;
     [HideInInspector] public Vector3 dir;
     float hzInput;
@@ -30,6 +31,13 @@ public class MovementStateManager : MonoBehaviour
         if(Input.GetKey(KeyCode.Escape))
         {
             Application.Quit();
+        }
+        if(!disabled)
+        {
+           // UpdateMouseLook();
+            //UpdateMovement();
+           GetDirectionAndMove();
+            //InteractCheck();
         }
     }
 
