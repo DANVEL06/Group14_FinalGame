@@ -16,14 +16,14 @@ public class DecoySpawnController : MonoBehaviour
     {
         
         spawned = false;
-        delay =3;
+        delay =5;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(delay >=3 && Input.GetKey(KeyCode.LeftControl))
+        if(delay >=5 && Input.GetKey(KeyCode.LeftControl))
         {
            Instantiate (decoy, spawnPos.position, Quaternion.identity );
            delay = 0;

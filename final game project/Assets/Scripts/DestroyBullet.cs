@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyDecoy : MonoBehaviour
+public class DestroyBullet : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,6 +13,8 @@ public class DestroyDecoy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject,3.5f);
+        Destroy(gameObject,3f);
     }
+
+    
 }
