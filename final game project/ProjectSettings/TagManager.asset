@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerDecoy
+  - Text
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - Water
   - UI
   - Grapple
-  - Target
-  - Obstruction
+  - Teleporter
+  - 
   - 
   - 
   - 
