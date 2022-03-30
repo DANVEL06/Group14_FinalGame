@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 703594561cd2e004b884d8718fac48b5, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.36767623, g: 0.27099603, b: 0.42602506, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9165797768001435688, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
     - target: {fileID: -8679921383154817045, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -186,10 +190,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8016412588606473749, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
+    - target: {fileID: -6002508473797582251, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
+    - target: {fileID: -4202798675411607032, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
+    - target: {fileID: -1526964690268444965, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
+    - target: {fileID: -809828480950454423, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
     - target: {fileID: 919132149155446097, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
       propertyPath: m_Name
       value: Player Model@Rifle Idle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5742066667910392887, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
+    - target: {fileID: 6552062264705231799, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
+    - target: {fileID: 7831909060113432234, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
+    - target: {fileID: 8417361359673230750, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
+    - target: {fileID: 8510132731797305157, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
+    - target: {fileID: 8662654272577283544, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a467979ee446abc4ba3a7812e512266f, type: 2}
     m_RemovedComponents:
     - {fileID: -1853094968961178454, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
     - {fileID: -6722085885383957590, guid: 8f3873e64b5b3084fba2b6ede858f34c, type: 3}
@@ -823,7 +871,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.098156, y: 1}
+    m_SensorSize: {x: 2.0978723, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -920,6 +968,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9165797768001435688, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
     - target: {fileID: -8679921383154817045, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -964,10 +1016,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8016412588606473749, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
+    - target: {fileID: -6002508473797582251, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
+    - target: {fileID: -4612520378060379669, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
+    - target: {fileID: -4202798675411607032, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
+    - target: {fileID: -1526964690268444965, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
+    - target: {fileID: -809828480950454423, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
+    - target: {fileID: 902343934094000621, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
     - target: {fileID: 919132149155446097, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
       propertyPath: m_Name
       value: Enemy Model@Rifle Aiming Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 3076138552580877421, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
+    - target: {fileID: 5742066667910392887, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
+    - target: {fileID: 8417361359673230750, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
+    - target: {fileID: 8510132731797305157, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
+    - target: {fileID: 8662654272577283544, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2bbcb231277a55341a8119466f315ea0, type: 2}
     m_RemovedComponents:
     - {fileID: -6722085885383957590, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
     - {fileID: -1853094968961178454, guid: a05db0f2d227c014d980e0aa4c5d357c, type: 3}
