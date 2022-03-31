@@ -89,4 +89,6 @@ public class FieldOfView : MonoBehaviour
 
         rig.AddForce(transform.forward * shootSpeed, ForceMode.VelocityChange);
     }
+
+    
 }

@@ -16,11 +16,16 @@ public class MovementStateManager : MonoBehaviour
 
     [SerializeField] float gravity = -9.81f;
     Vector3 velocity;
+    public int maxHealth = 3;
+    public int health { get { return currentHealth; }}
+    int currentHealth;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        currentHealth = maxHealth;
+        
     }
 
     // Update is called once per frame
@@ -42,6 +47,13 @@ public class MovementStateManager : MonoBehaviour
 
 
 
+    }
+    public void ChangeHealth(int amount)
+    {
+        
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        
+        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 
     void GetDirectionAndMove()
