@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerDecoy
   - Text
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -16,15 +16,19 @@ public class MovementStateManager : MonoBehaviour
 
     [SerializeField] float gravity = -9.81f;
     Vector3 velocity;
-    public int maxHealth = 3;
-    public int health { get { return currentHealth; }}
-    int currentHealth;
+    public int MaxHealth = 3;
+    public int currentHealth;
+    public UIHealthBar healthBar;
+    public DestroyBullet damage;
+    
+    
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        currentHealth = maxHealth;
+        currentHealth = MaxHealth;
+        healthBar.SetMaxHealth(MaxHealth);
         
     }
 
@@ -44,16 +48,28 @@ public class MovementStateManager : MonoBehaviour
            GetDirectionAndMove();
             //InteractCheck();
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(1);
+
+            healthBar.SetHealth(currentHealth);
+        }
 
 
 
     }
-    public void ChangeHealth(int amount)
+     void OnCollisionEnter(Collision collision)
+     {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            //If the GameObject has the same tag as specified, output this message in the console
+            Debug.Log("Do something else here");
+        }
+     }
+   
+    void TakeDamage(int damage)
     {
-        
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        
-        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+        currentHealth -= damage;
     }
 
     void GetDirectionAndMove()
@@ -96,4 +112,10 @@ public class MovementStateManager : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(spherePos, controller.radius - 0.05f);
     }
+
+    //public override bool Equals(object obj)
+   // {
+       // return obj is MovementStateManager manager &&
+               //EqualityComparer<HealthBar>.Default.Equals(healthBar, manager.healthBar);
+    //}
 }

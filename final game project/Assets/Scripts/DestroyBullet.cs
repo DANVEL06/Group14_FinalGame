@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DestroyBullet : MonoBehaviour
 {
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class DestroyBullet : MonoBehaviour
     {
         Destroy(gameObject,3f);
     }
-
+ 
     
 }
