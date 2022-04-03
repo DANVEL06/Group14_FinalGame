@@ -39,9 +39,6 @@ public class MovementStateManager : MonoBehaviour
            GetDirectionAndMove();
             //InteractCheck();
         }
-
-
-
     }
 
     void GetDirectionAndMove()

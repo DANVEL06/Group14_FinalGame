@@ -9,11 +9,13 @@ public class FieldOfView : MonoBehaviour
     public float angle;
 
     public GameObject playerRef;
+    public GameObject decoyRef;
 
     public LayerMask targetMask;
     public LayerMask obstructionMask;
 
     public bool canSeePlayer;
+    public bool seeDecoy;
 
     public GameObject bullet;
     public Transform shootPoint;
@@ -30,7 +32,19 @@ public class FieldOfView : MonoBehaviour
     }
     void Update()
     {
-        enemy.LookAt(playerRef.transform);
+        findDecoy();
+        if(canSeePlayer)
+        {
+            if(seeDecoy)
+            {
+                enemy.LookAt(decoyRef.transform);
+            }
+            else
+            {
+                enemy.LookAt(playerRef.transform);
+            }
+        }
+        
     }
 
     private void FixedUpdate()
@@ -54,6 +68,7 @@ public class FieldOfView : MonoBehaviour
         while (true)
         {
             yield return wait;
+            
             FieldOfViewCheck();
         }
     }
@@ -88,5 +103,19 @@ public class FieldOfView : MonoBehaviour
         Rigidbody rig = currentBullet.GetComponent<Rigidbody>();
 
         rig.AddForce(transform.forward * shootSpeed, ForceMode.VelocityChange);
+    }
+    void findDecoy()
+    {
+        if(GameObject.FindGameObjectWithTag("PlayerDecoy")== null)
+        {
+            seeDecoy = false;
+            return;
+            
+        }
+        else
+        {
+            decoyRef =GameObject.FindGameObjectWithTag("PlayerDecoy");
+            seeDecoy = true;
+        }
     }
 }
