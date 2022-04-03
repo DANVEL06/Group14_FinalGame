@@ -6,10 +6,14 @@ TagManager:
   tags:
   - PlayerDecoy
   - Text
+<<<<<<< HEAD
   - PlayerBullet
   - EnemyBullet
   - PlayerModel
   - Enemy
+=======
+  - Bullet
+>>>>>>> 512aa920f35c4c0d3cb683acd1dad410223da00f
   layers:
   - Default
   - TransparentFX

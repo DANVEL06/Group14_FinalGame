@@ -18,20 +18,11 @@ public class MovementStateManager : MonoBehaviour
 
     [SerializeField] float gravity = -9.81f;
     Vector3 velocity;
-<<<<<<< HEAD:final game project/Assets/Scripts/PlayerScripts/MovementStates/MovementStateManager.cs
 
     // Health
     public int maxHealth = 3;
     public int health { get { return currentHealth; }}
     int currentHealth;
-=======
-    public int MaxHealth = 3;
-    public int currentHealth;
-    public UIHealthBar healthBar;
-    public DestroyBullet damage;
-    
-    
->>>>>>> 512aa920f35c4c0d3cb683acd1dad410223da00f:final game project/Assets/Scripts/MovementStateManager.cs
 
     //Movement States 
     MovementBaseState currentState;
@@ -45,13 +36,8 @@ public class MovementStateManager : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         controller = GetComponent<CharacterController>();
-<<<<<<< HEAD:final game project/Assets/Scripts/PlayerScripts/MovementStates/MovementStateManager.cs
         currentHealth = maxHealth;
         SwitchState (Idle);
-=======
-        currentHealth = MaxHealth;
-        healthBar.SetMaxHealth(MaxHealth);
->>>>>>> 512aa920f35c4c0d3cb683acd1dad410223da00f:final game project/Assets/Scripts/MovementStateManager.cs
         
     }
 
@@ -72,39 +58,16 @@ public class MovementStateManager : MonoBehaviour
 
            GetDirectionAndMove();
         }
-<<<<<<< HEAD:final game project/Assets/Scripts/PlayerScripts/MovementStates/MovementStateManager.cs
-        if(Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            StartSlowMotion();
-        }
-        if(Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            StopSlowMotion();
-        }
-=======
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(1);
 
-            healthBar.SetHealth(currentHealth);
-        }
-
->>>>>>> 512aa920f35c4c0d3cb683acd1dad410223da00f:final game project/Assets/Scripts/MovementStateManager.cs
 
 
     }
-     void OnCollisionEnter(Collision collision)
-     {
-        if (collision.gameObject.tag == "Bullet")
-        {
-            //If the GameObject has the same tag as specified, output this message in the console
-            Debug.Log("Do something else here");
-        }
-     }
-   
-    void TakeDamage(int damage)
+    public void ChangeHealth(int amount)
     {
-        currentHealth -= damage;
+        
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        
+        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 
     public void SwitchState(MovementBaseState state)
@@ -117,15 +80,7 @@ public class MovementStateManager : MonoBehaviour
     {
         hzInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
-        
-        if(Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            dir = transform.forward * vInput + transform.right * hzInput * bulletTimeSpeed; 
-        }
-        else
-        {
-            dir = transform.forward * vInput + transform.right * hzInput; 
-        }
+        dir = transform.forward * vInput + transform.right * hzInput; 
         controller.Move(dir.normalized * moveSpeed * Time.deltaTime);
     }
     
@@ -161,22 +116,4 @@ public class MovementStateManager : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(spherePos, controller.radius - 0.05f);
     }
-<<<<<<< HEAD:final game project/Assets/Scripts/PlayerScripts/MovementStates/MovementStateManager.cs
-    void StartSlowMotion()
-    {
-        Time.timeScale = Mathf.Lerp(1,0.2f,5);
-    }
-
-    void StopSlowMotion()
-    {
-        Time.timeScale = Mathf.Lerp(0.2f, 1,5);
-    }
-=======
-
-    //public override bool Equals(object obj)
-   // {
-       // return obj is MovementStateManager manager &&
-               //EqualityComparer<HealthBar>.Default.Equals(healthBar, manager.healthBar);
-    //}
->>>>>>> 512aa920f35c4c0d3cb683acd1dad410223da00f:final game project/Assets/Scripts/MovementStateManager.cs
 }

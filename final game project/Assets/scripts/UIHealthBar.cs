@@ -5,23 +5,19 @@ using UnityEngine.UI;
 
 public class UIHealthBar : MonoBehaviour
 {
-    public static UIHealthBar instance { get; private set; }
-    
-    public Image mask;
-    float originalSize;
-    
-    void Awake()
+    public Slider slider;
+
+    public void SetMaxHealth( int health)
     {
-        instance = this;
+        slider.maxValue = health;
+        slider.value = health;
     }
 
-    void Start()
+    public void SetHealth(int health)
     {
-        originalSize = mask.rectTransform.rect.width;
+        slider.value = health;
     }
 
-    public void SetValue(float value)
-    {				      
-        mask.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, originalSize * value);
-    }
+
+
 }
