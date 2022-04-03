@@ -24,6 +24,8 @@ public class FieldOfView : MonoBehaviour
     float originalTime;
     public Transform enemy;
 
+    public AudioSource shootSound;
+
     private void Start()
     {
         originalTime=timeToShoot;
@@ -99,6 +101,7 @@ public class FieldOfView : MonoBehaviour
     }
      private void ShootPlayer()
     {
+        shootSound.Play();
         GameObject currentBullet = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
         Rigidbody rig = currentBullet.GetComponent<Rigidbody>();
 

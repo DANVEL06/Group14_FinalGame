@@ -7,7 +7,7 @@ public class MovementStateManager : MonoBehaviour
     public bool disabled = false;
     public float moveSpeed;
     public float runSpeed = 4, runBackSpeed = 3;
-    public float bulletTimeSpeed = 2;
+    public float bulletTimeSpeed = 3;
     [HideInInspector] public Vector3 dir;
     [HideInInspector] public float hzInput;
     [HideInInspector] public float vInput;
@@ -20,9 +20,7 @@ public class MovementStateManager : MonoBehaviour
     Vector3 velocity;
 
     // Health
-    public int maxHealth = 3;
-    public int health { get { return currentHealth; }}
-    int currentHealth;
+    
 
     //Movement States 
     MovementBaseState currentState;
@@ -36,7 +34,7 @@ public class MovementStateManager : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         controller = GetComponent<CharacterController>();
-        currentHealth = maxHealth;
+        
         SwitchState (Idle);
         
     }
@@ -69,13 +67,7 @@ public class MovementStateManager : MonoBehaviour
 
 
     }
-    public void ChangeHealth(int amount)
-    {
-        
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        
-        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
-    }
+    
 
     public void SwitchState(MovementBaseState state)
     {

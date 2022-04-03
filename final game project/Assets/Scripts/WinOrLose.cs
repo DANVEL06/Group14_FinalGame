@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class WinOrLose : MonoBehaviour
 {
-    public int health=3;
+    
+    public float currentHealth;
     public int score = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = 10f;
     }
 
     // Update is called once per frame
@@ -21,9 +22,12 @@ public class WinOrLose : MonoBehaviour
     {
         if(collision.gameObject.tag == "EnemyBullet")
         {
-            health--;
-            if(health <= 0)
-                Debug.Log("GameOver");
+            currentHealth--;
+            if(currentHealth <= 0)
+            {
+                SceneManager.LoadScene(4);
+            }
         }
     }
+    
 }

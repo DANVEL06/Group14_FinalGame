@@ -15,8 +15,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
-      human bone 'Hips' not found\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -24,7 +23,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -73,132 +72,13 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
+  referencedClips:
+  - 53e9bf019a6227341ae66528ca7958b9
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton:
-    - name: Player Model (Clone)
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Light
-      parentName: Player Model (Clone)
-      position: {x: -4.0762453, y: 10.26455, z: -1.005454}
-      rotation: {x: 0.52327543, y: -0.34203398, z: 0.72694236, w: 0.28416628}
-      scale: {x: 100.00001, y: 100, z: 100}
-    - name: Camera
-      parentName: Player Model (Clone)
-      position: {x: -7.3588915, y: 9.318997, z: 6.925791}
-      rotation: {x: 0.09062851, y: 0.89379627, z: -0.20997299, w: 0.3857799}
-      scale: {x: 100, y: 100.00001, z: 99.99999}
-    - name: Cube
-      parentName: Player Model (Clone)
-      position: {x: -0, y: 16.496716, z: 0}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 55.026466, y: 98.51789, z: 100}
-    - name: Cube.001
-      parentName: Player Model (Clone)
-      position: {x: -0, y: 13.058491, z: 0.083155714}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 124.94104, y: 92.09902, z: 211.18279}
-    - name: Cylinder
-      parentName: Player Model (Clone)
-      position: {x: -0, y: 15.414647, z: 0}
-      rotation: {x: -0.7375323, y: 0, z: -0, w: 0.6753119}
-      scale: {x: 54.86023, y: 54.860233, z: 63.294247}
-    - name: Cube.008
-      parentName: Player Model (Clone)
-      position: {x: -3.2716854, y: 14.235929, z: 0.3822462}
-      rotation: {x: -0.48461667, y: 0.5254829, z: -0.4782731, w: 0.5101659}
-      scale: {x: 48.562046, y: 65.2951, z: 146.2936}
-    - name: Cube.009
-      parentName: Player Model (Clone)
-      position: {x: -6.571392, y: 14.075777, z: 0.35159716}
-      rotation: {x: 0.700282, y: -0.18829176, z: 0.66453224, w: -0.18041132}
-      scale: {x: 48.308037, y: 47.0459, z: 137.41365}
-    - name: Cube.010
-      parentName: Player Model (Clone)
-      position: {x: -5.0006003, y: 14.038201, z: 0.32129973}
-      rotation: {x: 0.6998157, y: -0.08912109, z: 0.704936, w: -0.07335297}
-      scale: {x: 26.44843, y: 26.575129, z: 30.304485}
-    - name: Cube.002
-      parentName: Player Model (Clone)
-      position: {x: -8.804258, y: 14.044086, z: 0.10632169}
-      rotation: {x: -0.40860116, y: -0.4575467, z: 0.61558986, w: -0.49471733}
-      scale: {x: -6.9112573, y: -27.154236, z: -16.838171}
-    - name: Cube.020
-      parentName: Player Model (Clone)
-      position: {x: -8.7768, y: 14.110007, z: 0.25435966}
-      rotation: {x: -0.40860116, y: -0.4575467, z: 0.61558986, w: -0.49471733}
-      scale: {x: -9.27513, y: -27.15423, z: -16.838173}
-    - name: Cube.021
-      parentName: Player Model (Clone)
-      position: {x: -8.744165, y: 14.158048, z: 0.44890404}
-      rotation: {x: -0.49471706, y: 0.6155901, z: 0.45754647, w: 0.4086014}
-      scale: {x: 9.275129, y: 27.15423, z: 16.838171}
-    - name: Cube.022
-      parentName: Player Model (Clone)
-      position: {x: -8.708686, y: 14.210279, z: 0.6604092}
-      rotation: {x: -0.49471706, y: 0.6155901, z: 0.45754647, w: 0.4086014}
-      scale: {x: 9.275129, y: 27.15423, z: 16.838171}
-    - name: Cube.023
-      parentName: Player Model (Clone)
-      position: {x: -8.279623, y: 14.097828, z: 0.29854232}
-      rotation: {x: -0.4086012, y: -0.45754665, z: 0.61559, w: -0.4947172}
-      scale: {x: -36.335293, y: -43.489136, z: -18.859354}
-    - name: Cube.014
-      parentName: Player Model (Clone)
-      position: {x: 1.3978419, y: 8.713816, z: -0.15541431}
-      rotation: {x: 0.00000008409845, y: 0.7010356, z: 0.71312624, w: 0.000000023196295}
-      scale: {x: 27.298168, y: 65.47859, z: 265.13165}
-    - name: Cube.005
-      parentName: Player Model (Clone)
-      position: {x: 0.848782, y: 5.1596274, z: -0.43604964}
-      rotation: {x: -0.7132505, y: 0, z: -0, w: 0.7009092}
-      scale: {x: 38.6397, y: 61.40648, z: 226.22757}
-    - name: Cube.003
-      parentName: Player Model (Clone)
-      position: {x: 0.32108, y: 2.2206194, z: -1.120103}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 24.260231, y: 57.98163, z: 64.757614}
-    - name: Cube.004
-      parentName: Player Model (Clone)
-      position: {x: -1.3993472, y: 10.450223, z: -0.1325246}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 61.261738, y: 79.52143, z: 102.06387}
-    - name: Cube.006
-      parentName: Player Model (Clone)
-      position: {x: -1.2825913, y: 6.36585, z: -0.28555924}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 37.002575, y: 60.47729, z: 104.873344}
-    - name: Cube.007
-      parentName: Player Model (Clone)
-      position: {x: -0.7484935, y: 2.2494822, z: -0.885079}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 26.147715, y: 59.602608, z: 72.59029}
-    - name: Cube.011
-      parentName: Player Model (Clone)
-      position: {x: 3.5563154, y: 14.302076, z: 0.22409685}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 175.69197, y: 58.225758, z: 54.518723}
-    - name: Cube.012
-      parentName: Player Model (Clone)
-      position: {x: 6.983927, y: 14.274831, z: 0.2386998}
-      rotation: {x: -0.5998015, y: 0, z: -0, w: 0.80014884}
-      scale: {x: 144.04501, y: 53.582325, z: 51.591385}
-    - name: Cube.013
-      parentName: Player Model (Clone)
-      position: {x: 5.4435496, y: 14.320777, z: 0.31917202}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 24.743362, y: 23.33788, z: 25.106466}
-    - name: Cube.015
-      parentName: Player Model (Clone)
-      position: {x: 8.674911, y: 14.207472, z: 0.09894848}
-      rotation: {x: -0.81194896, y: 0, z: -0, w: 0.5837285}
-      scale: {x: 45.421684, y: 42.453224, z: 20.650259}
+    skeleton: []
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -209,13 +89,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

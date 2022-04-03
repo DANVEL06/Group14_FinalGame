@@ -7,6 +7,8 @@ public class PlayerGun : MonoBehaviour
     public GameObject bullet;
     public Transform shootPos;
     public float shootSpeed = 10f;
+    public AudioSource laserSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,8 @@ public class PlayerGun : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-           Shoot();
+            laserSound.Play();
+            Shoot();
         }
     }
 

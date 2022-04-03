@@ -11,10 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/How To Play Menu.unity
     guid: 1f875094c74e14c28ab18416f4db1209
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/hub.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Combat room.unity
     guid: de6c788a39660a8449011d607bec3326
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: c04d5d104d293dd4484667dcd0548c00
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: 6b5a834b350b05244881cf67a2e48db4
   m_configObjects: {}

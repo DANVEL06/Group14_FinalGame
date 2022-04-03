@@ -5,23 +5,21 @@ using UnityEngine.UI;
 
 public class UIHealthBar : MonoBehaviour
 {
-    public static UIHealthBar instance { get; private set; }
-    
-    public Image mask;
-    float originalSize;
-    
-    void Awake()
-    {
-        instance = this;
-    }
+    private Image healthBar;
+    public float currentHealth;
+    private float maxHealth = 10f;
+    WinOrLose lose;
 
-    void Start()
+    private void Start()
     {
-        originalSize = mask.rectTransform.rect.width;
+        healthBar = GetComponent<Image>();
+        lose = FindObjectOfType<WinOrLose>();
     }
-
-    public void SetValue(float value)
-    {				      
-        mask.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, originalSize * value);
+    private void Update()
+    {
+        currentHealth = lose.currentHealth;
+        healthBar.fillAmount = currentHealth / maxHealth;
     }
+    
+    
 }

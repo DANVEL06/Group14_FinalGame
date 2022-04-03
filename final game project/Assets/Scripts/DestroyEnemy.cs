@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class DestroyEnemy : MonoBehaviour
 {
     public int health=10;
@@ -25,8 +25,16 @@ public class DestroyEnemy : MonoBehaviour
             if(health <= 0)
             {
                 playerScore ++;
-                Debug.Log("Dead");
-                Destroy(gameObject);
+
+                if(playerScore >=7)
+                {
+                    SceneManager.LoadScene(3);
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
+                
             }
         }
     }

@@ -18,7 +18,7 @@ public class DestroyBullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "PlayerDecoy")
+        if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "PlayerDecoy"|| collision.gameObject.tag == "PlayerBullet"|| collision.gameObject.tag == "EnemyBuller" || collision.gameObject.tag == "Obstacle")
         {
             Destroy(gameObject);
         }

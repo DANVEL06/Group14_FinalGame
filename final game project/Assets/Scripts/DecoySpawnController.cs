@@ -11,6 +11,8 @@ public class DecoySpawnController : MonoBehaviour
     public Transform spawnPos;
     private bool spawned;
     private float delay;
+
+     public AudioSource decoySpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class DecoySpawnController : MonoBehaviour
     {
         if(delay >=5 && Input.GetKey(KeyCode.LeftControl))
         {
+            decoySpawn.Play();
            Instantiate (decoy, spawnPos.position, Quaternion.identity );
            delay = 0;
         }
