@@ -27,7 +27,7 @@ public class FieldOfView : MonoBehaviour
     private void Start()
     {
         originalTime=timeToShoot;
-        playerRef = GameObject.FindGameObjectWithTag("Player");
+        playerRef = GameObject.FindGameObjectWithTag("PlayerModel");
         StartCoroutine(FOVRoutine());
     }
     void Update()

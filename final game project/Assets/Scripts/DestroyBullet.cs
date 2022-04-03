@@ -13,7 +13,19 @@ public class DestroyBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject,3f);
+       
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "PlayerDecoy")
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject,3f);
+        }
     }
 
     
