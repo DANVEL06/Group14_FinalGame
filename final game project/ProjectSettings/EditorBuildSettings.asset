@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/How To Play Menu.unity
     guid: 1f875094c74e14c28ab18416f4db1209
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/hub.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoseScreen.unity
     guid: 6b5a834b350b05244881cf67a2e48db4
+  - enabled: 1
+    path: Assets/Scenes/speed room.unity
+    guid: 099353f218137704d87cb93051d10496
+  - enabled: 1
+    path: Assets/Scenes/bossfight.unity
+    guid: 446d5939f4313454f889be0d9001e8c3
   m_configObjects: {}

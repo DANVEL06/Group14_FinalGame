@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class combatroomtransition : MonoBehaviour
+public class tospeedroom : MonoBehaviour
 {
     public int iLevelToLoad;
     public string sLevelToLoad;
@@ -23,7 +23,7 @@ public class combatroomtransition : MonoBehaviour
     {
         GameObject collisionGameObject = collision.gameObject;
 
-        if(collisionGameObject.name == "Player Capsule")
+        if(collisionGameObject.name == "Player")
         {
             LoadScene();
         }
@@ -39,5 +39,4 @@ public class combatroomtransition : MonoBehaviour
             SceneManager.LoadScene(sLevelToLoad);
         }
     }
-    
 }
