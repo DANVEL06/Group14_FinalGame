@@ -7,6 +7,7 @@ public class MovementStateManager : MonoBehaviour
     public float speed;
     public float boostTimer;
     private bool boosting;
+    public float jumpSpeed;
 
 
     public bool disabled = false;
@@ -142,7 +143,12 @@ public class MovementStateManager : MonoBehaviour
         {
             velocity.y = -2;
         }
+        if(Input.GetButtonDown("Jump"))
+        {
+            velocity.y += jumpSpeed;
+        }
         controller.Move(velocity * Time.deltaTime);
+        
     }
 
     private void OnDrawGizmos()
