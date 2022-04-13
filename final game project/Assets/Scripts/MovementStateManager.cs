@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MovementStateManager : MonoBehaviour
 {
+    private float speed;
+    private float boostTimer;
+    private bool boosting;
+
+
     public bool disabled = false;
     public float moveSpeed;
     public float runSpeed = 4, runBackSpeed = 3;
@@ -36,6 +41,10 @@ public class MovementStateManager : MonoBehaviour
         controller = GetComponent<CharacterController>();
         
         SwitchState (Idle);
+
+        speed = 5;
+        boostTimer = 0;
+        boosting = false;
         
     }
 
@@ -64,10 +73,28 @@ public class MovementStateManager : MonoBehaviour
         {
             StopSlowMotion();
         }
+        if(boosting)
+        {
+            boostTimer += Time.deltaTime;
+            if(boostTimer >= 3)
+            {
+                speed = 5;
+                boostTimer = 0;
+                boosting = false;
+            }
+        }
 
 
     }
-    
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Speed Boost")
+        {
+            boosting = true;
+            speed = 15;
+            Destroy(other.gameObject);
+        }
+    }
 
     public void SwitchState(MovementBaseState state)
     {
@@ -88,7 +115,7 @@ public class MovementStateManager : MonoBehaviour
         {
             dir = transform.forward * vInput + transform.right * hzInput; 
         }
-        controller.Move(dir.normalized * moveSpeed * Time.deltaTime);
+        controller.Move(dir.normalized * speed * Time.deltaTime);
     }
     
     bool IsGround()

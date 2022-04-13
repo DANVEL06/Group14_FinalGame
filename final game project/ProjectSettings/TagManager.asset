@@ -11,6 +11,7 @@ TagManager:
   - PlayerModel
   - Enemy
   - Obstacle
+  - Speed Boost
   layers:
   - Default
   - TransparentFX
