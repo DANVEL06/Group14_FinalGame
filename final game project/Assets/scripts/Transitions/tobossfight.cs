@@ -5,39 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class tobossfight : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public int iLevelToLoad;
-    public string sLevelToLoad;
-    public bool useIntegerToLoadLevel = false;
-    // Start is called before the first frame update
-    void Start()
+     private void OnTriggerEnter (Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerEnter(Collider collision)
-    {
-        GameObject collisionGameObject = collision.gameObject;
-
-        if(collisionGameObject.name == "Player")
+        if(other.gameObject.tag == "Player")
         {
-            LoadScene();
-        }
-    }
-    void LoadScene()
-    {
-        if (useIntegerToLoadLevel)
-        {
-            SceneManager.LoadScene(iLevelToLoad);
-        }
-        else
-        {
-            SceneManager.LoadScene(sLevelToLoad);
+            SceneManager.LoadScene(7);
         }
     }
 }
