@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovementStateManager : MonoBehaviour
 {
-    private float speed;
-    private float boostTimer;
+    public float speed;
+    public float boostTimer;
     private bool boosting;
 
 
@@ -91,7 +91,7 @@ public class MovementStateManager : MonoBehaviour
         if(other.tag == "Speed Boost")
         {
             boosting = true;
-            speed = 15;
+            speed = 10;
             Destroy(other.gameObject);
         }
     }

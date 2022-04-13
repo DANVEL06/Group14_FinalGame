@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class tospeedroom : MonoBehaviour
+public class tocombatroom : MonoBehaviour
 {
      private void OnTriggerEnter (Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(3);
         }
     }
 }

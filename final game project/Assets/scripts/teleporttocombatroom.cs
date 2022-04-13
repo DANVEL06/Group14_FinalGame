@@ -5,25 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class teleporttocombatroom : MonoBehaviour
 {
-   MovementStateManager playerController;
-   void Start()
-   {
-     playerController = gameObject.GetComponent<MovementStateManager>();
-   }
-  void Update()
-  {
-     if(Input.GetKey(KeyCode.E))
-     {
-        StartCoroutine("Teleport");
-     }
-  }
-
-  IEnumerator Teleport()
-  {
-        playerController.disabled = true;
-        yield return new WaitForSeconds(0.01f);
-        gameObject.transform.position = new Vector3(36.69f, 1.4f, 59.8f);
-        yield return new WaitForSeconds(0.01f);
-        playerController.disabled = false;
-  }
+    private void OnTriggerEnter (Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene(3);
+        }
+    }
 }

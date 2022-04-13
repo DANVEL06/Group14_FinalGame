@@ -110,11 +110,13 @@ MonoBehaviour:
   dir: {x: 0, y: 0, z: 0}
   hzInput: 0
   vInput: 0
-  groundYOffset: 0.7
+  groundYOffset: 0.5
   groundMask:
     serializedVersion: 2
     m_Bits: 9
+  jumpSpeed: 8
   gravity: -9.81
+  maxHealth: 3
   anim: {fileID: 0}
 --- !u!114 &6183325888498974016
 MonoBehaviour:
