@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class MovementStateManager : MonoBehaviour
 {
-    private float speed;
-    private float boostTimer;
-    private bool boosting;
-
-
+    
     public bool disabled = false;
     public float moveSpeed;
     public float runSpeed = 4, runBackSpeed = 3;
-    public float bulletTimeSpeed = 3;
+    public float bulletTimeSpeed = 2;
     [HideInInspector] public Vector3 dir;
     [HideInInspector] public float hzInput;
     [HideInInspector] public float vInput;
@@ -21,11 +17,14 @@ public class MovementStateManager : MonoBehaviour
     [SerializeField] LayerMask groundMask;
     Vector3 spherePos;
 
-    [SerializeField] float gravity = -9.81f;
+    public float jumpSpeed;
+    [SerializeField] float gravity;
     Vector3 velocity;
 
     // Health
-    
+    public int maxHealth = 3;
+    public int health { get { return currentHealth; }}
+    int currentHealth;
 
     //Movement States 
     MovementBaseState currentState;
@@ -39,12 +38,8 @@ public class MovementStateManager : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         controller = GetComponent<CharacterController>();
-        
+        currentHealth = maxHealth;
         SwitchState (Idle);
-
-        speed = 5;
-        boostTimer = 0;
-        boosting = false;
         
     }
 
@@ -73,28 +68,10 @@ public class MovementStateManager : MonoBehaviour
         {
             StopSlowMotion();
         }
-        if(boosting)
-        {
-            boostTimer += Time.deltaTime;
-            if(boostTimer >= 3)
-            {
-                speed = 5;
-                boostTimer = 0;
-                boosting = false;
-            }
-        }
 
 
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Speed Boost")
-        {
-            boosting = true;
-            speed = 15;
-            Destroy(other.gameObject);
-        }
-    }
+    
 
     public void SwitchState(MovementBaseState state)
     {
@@ -115,7 +92,7 @@ public class MovementStateManager : MonoBehaviour
         {
             dir = transform.forward * vInput + transform.right * hzInput; 
         }
-        controller.Move(dir.normalized * speed * Time.deltaTime);
+        controller.Move(dir.normalized * moveSpeed * Time.deltaTime);
     }
     
     bool IsGround()
@@ -141,6 +118,10 @@ public class MovementStateManager : MonoBehaviour
         else if(velocity.y < 0)
         {
             velocity.y = -2;
+        }
+        if(Input.GetButtonDown("Jump"))
+        {
+            velocity.y += jumpSpeed;
         }
         controller.Move(velocity * Time.deltaTime);
     }
