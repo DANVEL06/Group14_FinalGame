@@ -9,7 +9,7 @@ public class WinTeleport : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("WinScreen");
         }
     }
 }

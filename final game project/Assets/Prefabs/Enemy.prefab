@@ -232,8 +232,8 @@ MonoBehaviour:
   seeDecoy: 0
   bullet: {fileID: 6767124542737643982, guid: eeef0f0a1603c984c9b7ffc0e0895f61, type: 3}
   shootPoint: {fileID: 7859867029470784622}
-  shootSpeed: 12
-  timeToShoot: 0.7
+  shootSpeed: 14
+  timeToShoot: 0.5
   enemy: {fileID: 7859867030286137022}
   shootSound: {fileID: 3642045401940023426}
 --- !u!82 &3642045401940023426

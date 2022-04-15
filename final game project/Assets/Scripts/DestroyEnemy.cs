@@ -6,10 +6,11 @@ public class DestroyEnemy : MonoBehaviour
 {
     public int health=10;
     public int playerScore =0;
+    FieldOfView view;
     // Start is called before the first frame update
     void Start()
     {
-        
+        view = GetComponent<FieldOfView>();
     }
 
     // Update is called once per frame
@@ -22,6 +23,9 @@ public class DestroyEnemy : MonoBehaviour
         if(collision.gameObject.tag == "PlayerBullet")
         {
             health--;
+            view.canSeePlayer = true;
+            view.ShootPlayer();
+            
             if(health <= 0)
             {
                 playerScore ++;

@@ -25,7 +25,7 @@ public class WinOrLose : MonoBehaviour
             currentHealth--;
             if(currentHealth <= 0)
             {
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene("LoseScreen");
             }
         }
     }

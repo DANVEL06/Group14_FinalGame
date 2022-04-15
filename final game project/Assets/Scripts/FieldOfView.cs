@@ -77,7 +77,9 @@ public class FieldOfView : MonoBehaviour
 
     private void FieldOfViewCheck()
     {
-        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
+        if(canSeePlayer ==false)
+        {
+            Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
 
         if (rangeChecks.Length != 0)
         {
@@ -98,8 +100,9 @@ public class FieldOfView : MonoBehaviour
         }
         else if (canSeePlayer)
             canSeePlayer = false;
+        }
     }
-     private void ShootPlayer()
+     public void ShootPlayer()
     {
         shootSound.Play();
         GameObject currentBullet = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
