@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -22,7 +23,14 @@ public class Timer : MonoBehaviour
         if ( timerActive == true)
         {
             currentTime = currentTime - Time.deltaTime;
+            if (currentTime <= 0)
+            {
+            timerActive = false;
+            Start();
+          SceneManager.LoadScene(5);
+             }
         }
+        
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         currentTimeText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
     }
@@ -40,6 +48,7 @@ public class Timer : MonoBehaviour
         {
             timerActive = true;
         }
+         
     }
     
 }
