@@ -125,6 +125,7 @@ public class MovementStateManager : MonoBehaviour
         
         if(Physics.CheckSphere(spherePos, controller.radius - 0.05f, groundMask))
         {
+            anim.SetBool("isInGround",true);
             return true;
         }
         else
@@ -145,7 +146,9 @@ public class MovementStateManager : MonoBehaviour
         }
         if(Input.GetButtonDown("Jump"))
         {
+            
             velocity.y += jumpSpeed;
+            anim.SetBool("isInGround",false);
         }
         controller.Move(velocity * Time.deltaTime);
         

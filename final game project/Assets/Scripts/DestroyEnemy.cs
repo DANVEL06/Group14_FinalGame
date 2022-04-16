@@ -24,7 +24,7 @@ public class DestroyEnemy : MonoBehaviour
         {
             health--;
             view.canSeePlayer = true;
-            view.ShootPlayer();
+          
             
             if(health <= 0)
             {
