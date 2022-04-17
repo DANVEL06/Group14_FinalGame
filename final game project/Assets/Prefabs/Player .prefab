@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   boostTimer: 0
-  jumpSpeed: 7
+  jumpSpeed: 2
   disabled: 0
   moveSpeed: 3
   runSpeed: 4
@@ -117,7 +117,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 9
-  gravity: -9.81
+  gravity: -20.47
   anim: {fileID: 0}
 --- !u!114 &6183325888498974016
 MonoBehaviour:
