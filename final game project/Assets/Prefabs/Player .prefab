@@ -237,6 +237,7 @@ MonoBehaviour:
   decoy: {fileID: 8842863178859949296, guid: ef5a31f196f102940afc13a945b25f67, type: 3}
   spawnPos: {fileID: 6183325888605229325}
   decoySpawn: {fileID: 5874640588069120945}
+  canSpawn: 0
 --- !u!82 &5874640588069120945
 AudioSource:
   m_ObjectHideFlags: 0
@@ -406,13 +407,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ce7d6756534e7d746ad9706fcde6f10d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.515
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 73
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
