@@ -8,6 +8,8 @@ public class boxmover : MonoBehaviour
 public Transform startMarker;
 public Transform endMarker;
 
+ bool boxisMoving =  true;
+
 // Movement speed in units/sec.
 public float speed = 1.0F;
 
@@ -29,6 +31,8 @@ void Start()
 // Follows the target position like with a spring
 void Update()
      {
+          if ( boxisMoving == true)
+          {
      // Distance moved = time * speed.
           float distCovered = (Time.time - startTime) * speed;
 
@@ -37,5 +41,14 @@ void Update()
 
      // Set our position as a fraction of the distance between the markers and pingpong the movement.
           transform.position = Vector3.Lerp(startMarker.position, endMarker.position, Mathf.PingPong (fracJourney, 1));
+          }
      }
+     private void OnTriggerEnter (Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            boxisMoving = false;
+        }
+         
+    }
 }
