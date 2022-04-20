@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -73814,6 +73814,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3749720355474093194, guid: ab5278ed7b743834495c3e04d629e93c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 30.8421
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749720355474093194, guid: ab5278ed7b743834495c3e04d629e93c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30.8421
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749720355474093194, guid: ab5278ed7b743834495c3e04d629e93c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -45.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749720355474093194, guid: ab5278ed7b743834495c3e04d629e93c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 9.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002085455786042737, guid: ab5278ed7b743834495c3e04d629e93c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e28911ea72614f90b7f2b82629d83f7, type: 3}
+    - target: {fileID: 5002085455786042737, guid: ab5278ed7b743834495c3e04d629e93c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002085455786042737, guid: ab5278ed7b743834495c3e04d629e93c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002085455786042737, guid: ab5278ed7b743834495c3e04d629e93c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.97408223
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002085455786042737, guid: ab5278ed7b743834495c3e04d629e93c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5990566
+      objectReference: {fileID: 0}
     - target: {fileID: 5312376144335715918, guid: ab5278ed7b743834495c3e04d629e93c, type: 3}
       propertyPath: m_Name
       value: Healthbar
@@ -73976,8 +74012,20 @@ PrefabInstance:
       value: 'Player '
       objectReference: {fileID: 0}
     - target: {fileID: 6183325889197445288, guid: ef40e04fd3e864c4cbadbeaf18a4d206, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0499992
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183325889197445288, guid: ef40e04fd3e864c4cbadbeaf18a4d206, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183325889197445288, guid: ef40e04fd3e864c4cbadbeaf18a4d206, type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.8600006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183325889197445288, guid: ef40e04fd3e864c4cbadbeaf18a4d206, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6183325889197445289, guid: ef40e04fd3e864c4cbadbeaf18a4d206, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
