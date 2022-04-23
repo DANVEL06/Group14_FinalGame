@@ -10,6 +10,7 @@ public class MovementStateManager : MonoBehaviour
     public float jumpSpeed;
 
 
+
     public bool disabled = false;
     public float moveSpeed;
     public float runSpeed = 4, runBackSpeed = 3;
@@ -168,4 +169,5 @@ public class MovementStateManager : MonoBehaviour
     {
         Time.timeScale = Mathf.Lerp(0.2f, 1,5);
     }
+
 }
