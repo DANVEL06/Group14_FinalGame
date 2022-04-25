@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    bool timerActive = false;
+    bool timerActive = true;
     float currentTime;
     public int startMinutes;
     public Text currentTimeText;
