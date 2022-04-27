@@ -145,7 +145,7 @@ public class MovementStateManager : MonoBehaviour
         {
             velocity.y = -2;
         }
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && IsGround())
         {
             
             velocity.y += jumpSpeed;
