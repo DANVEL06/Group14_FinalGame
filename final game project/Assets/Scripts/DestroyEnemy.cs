@@ -7,6 +7,7 @@ public class DestroyEnemy : MonoBehaviour
     public int health=10;
     public int playerScore =0;
     FieldOfView view;
+    public AudioSource hit;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class DestroyEnemy : MonoBehaviour
     {
         if(collision.gameObject.tag == "PlayerBullet")
         {
+            hit.Play();
             health--;
             view.canSeePlayer = true;
           

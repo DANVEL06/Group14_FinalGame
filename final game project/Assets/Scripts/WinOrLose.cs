@@ -7,6 +7,7 @@ public class WinOrLose : MonoBehaviour
     
     public float currentHealth;
     public int score = 0;
+     public AudioSource hit;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class WinOrLose : MonoBehaviour
     {
         if(collision.gameObject.tag == "EnemyBullet")
         {
+            hit.Play();
             currentHealth--;
             if(currentHealth <= 0)
             {
