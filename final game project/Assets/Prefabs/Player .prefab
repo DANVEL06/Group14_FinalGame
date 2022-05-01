@@ -491,7 +491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6767124542737643982, guid: 45a65ccdde3b39441914edc267493c61, type: 3}
   shootPos: {fileID: 6183325888863444977}
-  shootSpeed: 10
+  shootSpeed: 16
   laserSound: {fileID: 7992931659534575040}
 --- !u!82 &7992931659534575040
 AudioSource:
