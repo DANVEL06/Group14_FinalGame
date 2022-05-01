@@ -14,7 +14,7 @@ public class MovementStateManager : MonoBehaviour
     public bool disabled = false;
     public float moveSpeed;
     public float runSpeed = 4, runBackSpeed = 3;
-    public float bulletTimeSpeed = 3;
+    public float bulletTimeSpeed = 5;
     [HideInInspector] public Vector3 dir;
     [HideInInspector] public float hzInput;
     [HideInInspector] public float vInput;

@@ -9,7 +9,7 @@ public class tobossfight : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene("Boss Cut Scene");
         }
     }
 }

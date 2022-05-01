@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class DestroyBoss : MonoBehaviour
 {
-    public int health=2;
+    public int health=50;
     
     FieldOfView view;
     public AudioSource hit;

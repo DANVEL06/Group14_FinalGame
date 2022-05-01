@@ -9,7 +9,7 @@ public class tospeedroom : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene("Speed Cut Scene");
         }
     }
 }

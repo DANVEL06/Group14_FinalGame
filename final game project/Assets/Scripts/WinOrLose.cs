@@ -11,7 +11,7 @@ public class WinOrLose : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = 1000f;
+        currentHealth = 10f;
     }
 
     // Update is called once per frame

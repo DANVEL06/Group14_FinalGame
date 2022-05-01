@@ -9,7 +9,7 @@ public class tocombatroom : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("Combat Cut Scene");
         }
     }
 }
