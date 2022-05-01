@@ -2,34 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class WinOrLose : MonoBehaviour
+public class DestroyBoss : MonoBehaviour
 {
+    public int health=2;
     
-    public float currentHealth;
-    public int score = 0;
-     public AudioSource hit;
+    FieldOfView view;
+    public AudioSource hit;
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = 1000f;
+        view = GetComponent<FieldOfView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       if (health <2)
+        SceneManager.LoadScene("WinScreen");
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if(collision.gameObject.tag == "EnemyBullet")
+        if(collision.gameObject.tag == "PlayerBullet")
         {
             hit.Play();
-            currentHealth--;
-            if(currentHealth <= 0)
-            {
-                SceneManager.LoadScene("LoseScreen");
-            }
+            health--;
+            view.canSeePlayer = true;
+          
+           
+            
         }
     }
-    
 }

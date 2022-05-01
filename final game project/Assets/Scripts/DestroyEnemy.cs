@@ -18,6 +18,7 @@ public class DestroyEnemy : MonoBehaviour
     void Update()
     {
         
+        
     }
     private void OnTriggerEnter(Collider collision)
     {

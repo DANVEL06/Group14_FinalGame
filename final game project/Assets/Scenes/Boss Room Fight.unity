@@ -2932,6 +2932,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 9201853975557467469, guid: 194aeb075e4ac8b4fa7acddb4df4e53f, type: 3}
+      propertyPath: health
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201853975557467469, guid: 194aeb075e4ac8b4fa7acddb4df4e53f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 194aeb075e4ac8b4fa7acddb4df4e53f, type: 3}
 --- !u!1 &248701703
@@ -7753,6 +7761,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6183325888498974023, guid: ef40e04fd3e864c4cbadbeaf18a4d206, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6183325888498974026, guid: ef40e04fd3e864c4cbadbeaf18a4d206, type: 3}
       propertyPath: gravity
       value: -9.81
@@ -7760,6 +7772,10 @@ PrefabInstance:
     - target: {fileID: 6183325888498974026, guid: ef40e04fd3e864c4cbadbeaf18a4d206, type: 3}
       propertyPath: groundYOffset
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183325888498974026, guid: ef40e04fd3e864c4cbadbeaf18a4d206, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 521
       objectReference: {fileID: 0}
     - target: {fileID: 6183325888498974027, guid: ef40e04fd3e864c4cbadbeaf18a4d206, type: 3}
       propertyPath: m_Name

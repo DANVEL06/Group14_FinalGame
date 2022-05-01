@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 867040923633010642}
-  - component: {fileID: 867040923633010655}
   - component: {fileID: 867040923633010640}
   - component: {fileID: 867040923633010641}
   - component: {fileID: 8500135428181999830}
   - component: {fileID: 3413220380797220653}
+  - component: {fileID: 9201853975557467469}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -37,21 +37,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &867040923633010655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867040923633010643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2047fa26c66b4644bbc6484ae00786b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  playerScore: 0
-  hit: {fileID: 3413220380797220653}
 --- !u!114 &867040923633010640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +272,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9201853975557467469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867040923633010643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42314fd47b776034999602d3f184e1b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  hit: {fileID: 3413220380797220653}
 --- !u!1 &8326762165820802050
 GameObject:
   m_ObjectHideFlags: 0
